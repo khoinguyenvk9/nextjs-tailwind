@@ -12,6 +12,7 @@ export const products: IProduct[] = [
     price: "9,999,000",
     image:
       "https://mercedes-hcm.vn/wp-content/uploads/2021/07/GLC-300-4MATIC-bd-1.png",
+    status: "soldOut",
   },
   {
     name: "Mercedes-Maybach GLS 600 4MATIC",
