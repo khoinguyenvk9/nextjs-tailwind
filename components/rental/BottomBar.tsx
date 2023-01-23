@@ -12,12 +12,12 @@ type BottomBarProps = {
   tabActive: number;
 };
 
-const activeClass = "text-yellow-500";
+const activeClass = "text-yellow-100 border-b-4 transition ease-in-out delay-150";
 
 export const BottomBar: FC<BottomBarProps> = ({ tabActive = 0 }) => {
   const router = useRouter();
   return (
-    <div className="bg-violet-900 flex items-center justify-around px-3 py-1 text-white">
+    <div className="bg-yellow-500 flex items-center justify-around px-3 py-1 text-white">
       <div
         className="flex justify-content-center gap-1 items-center flex-col"
         onClick={() => router.push("/rental-app")}
@@ -25,7 +25,7 @@ export const BottomBar: FC<BottomBarProps> = ({ tabActive = 0 }) => {
         <MagnifyingGlassIcon
           width="24"
           height="24"
-          className={tabActive == 0 ? "text-yellow-500" : ""}
+          className={tabActive == 0 ? "text-yellow-100" : ""}
         />
         <span className={`text-[10px] ${tabActive == 0 ? activeClass : ""}`}>
           Tìm kiếm
@@ -38,7 +38,7 @@ export const BottomBar: FC<BottomBarProps> = ({ tabActive = 0 }) => {
         <BookmarkIcon
           width="24"
           height="24"
-          className={tabActive == 1 ? "text-yellow-500" : ""}
+          className={tabActive == 1 ? "text-yellow-100" : ""}
         ></BookmarkIcon>
         <span className={`text-[10px] ${tabActive == 1 ? activeClass : ""}`}>
           Lịch sử
@@ -64,7 +64,7 @@ export const BottomBar: FC<BottomBarProps> = ({ tabActive = 0 }) => {
         <TicketIcon
           width="24"
           height="24"
-          className={tabActive == 3 ? "text-yellow-500" : ""}
+          className={tabActive == 3 ? "text-yellow-100" : ""}
         />
         <span className={`text-[10px] ${tabActive == 3 ? activeClass : ""}`}>
          khuyến mãi

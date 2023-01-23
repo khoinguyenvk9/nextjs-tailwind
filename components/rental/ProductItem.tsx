@@ -28,13 +28,19 @@ export const ProductItem: FC<{
         )}
       </div>
       <h4 className="font-semibold mt-2 mb-0">{product?.name}</h4>
-      <h4 className="text-zinc-500 font-light lining-nums">
-        {product?.price}
-        <sup>VNĐ</sup>
-      </h4>
-      <div className="flex items-center gap-2 text-yellow-500 uppercase text-xs justify-end">
-        Retal now
-        <ArrowLongRightIcon className="" width="20" height="20" />
+      <div className="flex justify-between py-3">
+        <div>
+          <h4 className="text-zinc-500 font-light lining-nums">
+            {product?.price}
+            <sup>VNĐ</sup>
+          </h4>
+        </div>
+        <div className="self-end">
+          <div className="flex items-center gap-2 text-white rounded-2xl bg-yellow-500 px-5 py-3 uppercase text-xs font-semibold justify-end">
+            Booking now
+            <ArrowLongRightIcon className="" width="20" height="20" />
+          </div>
+        </div>
       </div>
     </div>
   );
