@@ -12,10 +12,12 @@ type BottomBarProps = {
   tabActive: number;
 };
 
-const activeClass = "text-yellow-100 border-b-4 transition ease-in-out delay-150";
+const activeClass =
+  "text-yellow-100 border-b-4 transition ease-in-out delay-150";
 
 export const BottomBar: FC<BottomBarProps> = ({ tabActive = 0 }) => {
   const router = useRouter();
+  const { back } = router;
   return (
     <div className="bg-yellow-500 flex items-center justify-around px-3 py-1 text-white">
       <div
@@ -66,8 +68,12 @@ export const BottomBar: FC<BottomBarProps> = ({ tabActive = 0 }) => {
           height="24"
           className={tabActive == 3 ? "text-yellow-100" : ""}
         />
-        <span className={`text-[10px] ${tabActive == 3 ? activeClass : ""}`}>
-         khuyến mãi
+        <span
+          className={`text-[10px] whitespace-nowrap ${
+            tabActive == 3 ? activeClass : ""
+          }`}
+        >
+          khuyến mãi
         </span>
       </div>
     </div>

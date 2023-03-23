@@ -4,7 +4,10 @@ const A = () => {
 
 const B = () => {
   return <div>zzzzzzzzzzzzzzzzzz</div>;
-}
+};
 
+const C = () => {
+  return <div></div>;
+};
 
-export {A, B}
+export { A, B };
